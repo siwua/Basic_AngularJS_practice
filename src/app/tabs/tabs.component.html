@@ -1,0 +1,22 @@
+<!-- <div>
+  <ul class="nav nav-tabs">
+    <li role="presentation" [ngClass]="{active: chosenSide === 'all'}">
+      <a (click)="onChoose('all')" style="cursor: pointer">All</a></li>
+    <li role="presentation" [ngClass]="{active: chosenSide === 'light'}">
+      <a (click)="onChoose('light')" style="cursor: pointer">Light</a></li>
+    <li role="presentation" [ngClass]="{active: chosenSide === 'dark'}">
+      <a (click)="onChoose('dark')" style="cursor: pointer">Dark</a></li>
+  </ul>
+  <app-list [characters]="getCharacter()"></app-list>
+</div> -->
+<div>
+<ul class="nav nav-tabs">
+    <li role="presentation" routerLinkActive="active">
+      <a routerLink="/characters/all">All</a></li>
+    <li role="presentation" routerLinkActive="active">
+      <a routerLink="/characters/light">Light</a></li>
+    <li role="presentation" routerLinkActive="active">
+      <a routerLink="/characters/dark">Dark</a></li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>
